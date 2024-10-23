@@ -139,20 +139,40 @@ def procurarPrim(arestas, noInicial):
 def main():
     # Para amostragem
     G = nx.Graph()
-    G.add_edge(2, 1, weight=8)
-    G.add_edge(2, 4, weight=6)
-    G.add_edge(4, 1, weight=7)
-    G.add_edge(1, 5, weight=5)
-    G.add_edge(1, 3, weight=3)
-    G.add_edge(5, 3, weight=4)
+    G.add_edge(4,5, weight=35)
+    G.add_edge(4,7, weight=37)
+    G.add_edge(5,7, weight=28)
+    G.add_edge(0,7, weight=16)
+    G.add_edge(1,5, weight=32)
+    G.add_edge(0,4, weight=38)
+    G.add_edge(2,3, weight=17)
+    G.add_edge(1,7, weight=19)
+    G.add_edge(0,2, weight=26)
+    G.add_edge(1,2, weight=36)
+    G.add_edge(1,3, weight=29)
+    G.add_edge(2,7, weight=34)
+    G.add_edge(6,2, weight=40)
+    G.add_edge(3,6, weight=52)
+    G.add_edge(6,0, weight=58)
+    G.add_edge(6,4, weight=93)
     # Para conta
     arestas = [
-        Aresta(2, 1, 8),
-        Aresta(2, 4, 6),
-        Aresta(4, 1, 7),
-        Aresta(1, 5, 5),
-        Aresta(1, 3, 3),
-        Aresta(5, 3, 4),
+        Aresta(4,5,35),
+        Aresta(4,7,37),
+        Aresta(5,7,28),
+        Aresta(0,7,16),
+        Aresta(1,5,32),
+        Aresta(0,4,38),
+        Aresta(2,3,17),
+        Aresta(1,7,19),
+        Aresta(0,2,26),
+        Aresta(1,2,36),
+        Aresta(1,3,29),
+        Aresta(2,7,34),
+        Aresta(6,2,40),
+        Aresta(3,6,52),
+        Aresta(6,0,58),
+        Aresta(6,4,93),
     ]
 
     arvoreKruskal = procurarKruskal(arestas)
